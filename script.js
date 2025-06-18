@@ -15,7 +15,7 @@ const matrixLetters = letters.split(''); // Convert the string into an array of 
 function resizeCanvas() {
   canvas.width = window.innerWidth; // Canvas width matches window width
   canvas.height = window.innerHeight; // Canvas height matches window height
-  columns = Math.floor(canvas.width / fontSize); // Calculate the number of columns
+  columns = (Math.floor(canvas.width / fontSize)+1); // Calculate the number of columns
   drops = new Array(columns).fill(1); // Initialize drops to the top of the canvas
 }
 
