@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let typingIndex = 0; // To track the current character being typed
   const totalCharacters = typingText.length; // Total characters in the text
 
-  // Start typing animation and progress update
+  // Adjust typing speed based on device
+  const isMobile = window.innerWidth <= 768; // Detect mobile devices
+  const typingSpeed = isMobile ? 150 : 100; // Slower typing speed for mobile
+
+  // Function to handle typing and progress
   function typeAndUpdateProgress() {
       if (typingIndex < totalCharacters) {
           // Update the typed text
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           loadingBar.style.width = `${progress}%`; // Update progress bar width
 
           // Continue typing
-          setTimeout(typeAndUpdateProgress, 100); // Adjust typing speed here
+          setTimeout(typeAndUpdateProgress, typingSpeed);
       } else {
           // Typing and progress complete
           clearInterval(typeAndUpdateProgress);
