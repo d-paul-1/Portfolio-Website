@@ -24,7 +24,7 @@
 .loading-bar {
     width: 0%; /* Initial width set to 0% */
     height: 4px;
-    background: linear-gradient(90deg, #00ffcc, #00ff99);
+    background: linear-gradient(90deg, #00ffb792, #00ff99);
     position: absolute;
     bottom: 10px; /* Positioned at the bottom for consistency */
     left: 0;
