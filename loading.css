@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #151515;
+    background: #151515; /* Slightly lighter black for better contrast */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,80 +13,76 @@
     z-index: 9999;
     opacity: 1;
     transition: opacity 1s ease-in-out;
-  }
-  
-  .loading-screen.fade-out {
+}
+
+.loading-screen.fade-out {
     opacity: 0;
     pointer-events: none;
-  }
-  
-  /* Loading bar */
-  .loading-bar {
-    width: 0%;
+}
+
+/* Loading bar */
+.loading-bar {
+    width: 0%; /* Initial width set to 0% */
     height: 4px;
-    background: linear-gradient(90deg, #00ffb792, #00ff99);
+    background: linear-gradient(90deg, #1d8a30, #66ff66, #1d8a30); /* Subtle neon gradient */
     position: absolute;
     bottom: 10px;
     left: 0;
     transition: width 0.3s ease-in-out, opacity 1s ease-in-out;
-  }
-  
-  .loading-bar.fade-out {
+}
+
+.loading-bar.fade-out {
     opacity: 0;
-  }
-  
-  /* Loading text */
-  .loading-text {
+}
+
+/* Loading text */
+.loading-text {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-    font-size: 2.5rem;
+    bottom: 20px; /* Distance from the bottom edge */
+    right: 20px; /* Distance from the right edge */
+    color: #66ff66; /* Softer green */
+    font-size: 2.5rem; /* Adjusted size for better readability */
     font-weight: 400;
+    text-shadow: 
+        0 0 3px #66ff66, 
+        0 0 6px #33cc33, 
+        0 0 10px #009900, 
+        0 0 15px #006600; /* Softer glow for text */
     transition: opacity 1s ease-in-out;
-  }
-  
-  .loading-text.fade-out {
+}
+
+.loading-text.fade-out {
     opacity: 0;
-  }
-  
-  /* Typing container */
-  .typing-container {
+}
+
+/* Typing container */
+.typing-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    color: #00ffcc;
+    color: #66ff66; /* Softer neon color */
     text-align: center;
-    white-space: normal; /* Allow wrapping on mobile */
-    line-height: 1.5;
+    white-space: pre-wrap; /* Allows wrapping but keeps the caret position correct */
     overflow: hidden;
-    border-right: 2px solid #00ffcc;
-    width: 0;
-    animation: typing 7s steps(50, end), blink-caret 0.6s step-end infinite;
-    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ff99;
-  }
-  
-  /* Typing animation */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  /* Blinking cursor */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #00ffcc;
-    }
-  }
-  
+    text-shadow: 
+        0 0 3px #66ff66, 
+        0 0 6px #33cc33, 
+        0 0 10px #009900, 
+        0 0 15px #006600; /* Softer, layered glow */
+    line-height: 1.5; /* Space between lines for wrapping */
+}
+
+
+/* Text glow for each typed character */
+.typing-container span {
+    color: #66ff66; /* Softer neon green */
+    text-shadow: 
+        0 0 3px #66ff66, 
+        0 0 6px #33cc33, 
+        0 0 10px #009900, 
+        0 0 15px #006600; /* Improved gradient glow */
+}
+
