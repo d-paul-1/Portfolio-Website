@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Start the matrix effect after a short delay
       setTimeout(() => {
         loadingScreen.style.display = "none";
-        startMatrixEffect();
       }, 1000);
     }
   }

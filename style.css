@@ -1,0 +1,77 @@
+/* Fixed Transparent Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.6); /* Slightly more transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Keeps header above sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.nav {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #66ff66; /* Neon green */
+    font-weight: bold;
+    padding: 10px 20px;
+    text-shadow: 0 0 10px #33cc33, 0 0 20px #66ff66; /* Glow effect */
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+    background: rgba(102, 255, 102, 0.1); /* Subtle neon green highlight */
+    box-shadow: 0 0 10px #c144f6, 0 0 20px #9400D3; /* Stronger glow */
+    color: #00ffcc;
+}
+
+/* Section Styling */
+.section {
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    z-index: 5; /* Ensures sections remain above matrix canvas */
+    background: transparent; /* Allows the matrix rain to show through */
+    backdrop-filter: blur(2px); /* Adds a subtle blur over the matrix background */
+}
+
+/* About Section */
+#about {
+    background: rgba(0, 0, 0, 0.3); /* Slight overlay for better readability */
+}
+
+/* Projects Section */
+#projects {
+    background: rgba(0, 0, 0, 0.3); /* Slight overlay for better readability */
+}
+
+/* Contact Section */
+#contact {
+    background: rgba(0, 0, 0, 0.3); /* Slight overlay for better readability */
+}
+
+/* Smooth Transition on Scroll */
+html {
+    scroll-behavior: smooth;
+}

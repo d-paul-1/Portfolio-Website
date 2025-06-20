@@ -1,6 +1,6 @@
 body {
     background-color: #000; /* Ensures the effect is visible against a dark background */
-    overflow: hidden; /* Prevents scrollbars from appearing during animation */
+     /* overflow: hidden; Prevents scrollbars from appearing during animation */
     margin: 0; /* Removes any default margins for the body */
   }
   
